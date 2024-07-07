@@ -21,6 +21,12 @@ const images = [
     'images/Fotolia_239116868_XL.jpg',
     'images/TomHegen.jpg',
     'images/Fotolia_251340105_XL.jpg',
+    'images/TomHegen.jpg',
+    'images/Fotolia_251340105_XL.jpg',
+    'images/TomHegen.jpg',
+    'images/Fotolia_251340105_XL.jpg',
+    'images/TomHegen.jpg',
+    'images/Fotolia_251340105_XL.jpg',
     'images/Fotolia_239116868_XL.jpg' // Add as many as you like
 ];
 
@@ -31,4 +37,4 @@ function changeBackgroundImage() {
     document.querySelector('.body-container').style.backgroundImage = `url(${images[currentImageIndex]})`;
 }
 
-setInterval(changeBackgroundImage, 5000); // Change image every 5 seconds
+setInterval(changeBackgroundImage, 10000); 

@@ -13,6 +13,10 @@ const images = [
     'images/Fotolia_239116868_XL.jpg',
     'images/TomHegen.jpg',
     'images/Fotolia_251340105_XL.jpg',
+    'images/TomHegen.jpg',
+    'images/Fotolia_251340105_XL.jpg',
+    'images/TomHegen.jpg',
+    'images/Fotolia_251340105_XL.jpg',
     'images/Fotolia_239116868_XL.jpg' // Add as many as you like
 ];
 
