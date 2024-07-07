@@ -19,8 +19,9 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 103vh;
+    height: 100vh;
     transition: background-image 3s ease-in-out; /* Smooth transition */
+    background-image: url('../images/Fotolia_251340105_XL.jpg'); /* Initial background image */
 }
 
 .behance-header {
