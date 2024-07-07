@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs with Icons</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   <div class="body-container">
+      <div class="behance-header">
+         <img src="images/1x_b431ffdf8fed1c95074548ecb9d4920e.png" alt="">
+         <h2>Behance</h2>
+      </div>
+
+      <div class="form-container">
+         <div class="form-container-wrapper">
+            <h1 class="sign-in-header">Sign in</h1>
+            <h4>New user? <a href="index.html">Create an account</a></h4>
+            <div class="input-wrapper-column">
+               <input type="email" placeholder="Email address" class="email-column">
+            </div>
+            <button class="btn">Continue</button>
+            <div class="separator">
+               <span class="left"></span><h5>Or</h5><span class="right"></span>
+            </div>
+         </div>
+
+         <div class="input-wrapper">
+            <div class="input-container">
+               <label for="search" class="input-label">
+                  <img src="images/download.png" alt="Search Icon" class="input-icon">
+                  <span>Continue with Google</span>
+               </label>
+               <input type="text" id="search" disabled>
+            </div>
+         </div>
+         <div class="input-wrapper">
+            <div class="input-container">
+               <label for="email" class="input-label">
+                  <img src="images/facebook.svg" alt="Email Icon" class="input-icon">
+                  <span>Continue with Facebook</span>
+               </label>
+               <input type="text" id="email">
+            </div>
+         </div>
+         <div class="input-wrapper">
+            <div class="input-container">
+               <label for="phone" class="input-label">
+                  <img src="images/apple.svg" alt="Phone Icon" class="input-icon">
+                  <span>Continue with Apple</span>
+               </label>
+               <input type="text" id="phone">
+            </div>
+         </div>
+         <p class="view-more"><a href="#">View More</a></p>
+         <p class="sign-in-link"><a href="#">Get help signing in</a></p>
+      </div>
+
+      <div class="st">
+        <img src="images/Stock (1).svg" alt="">
+         <h4 class="author">Hamzat mujeeb</h4>
+      </div>
+
+      <div class="message-icon">
+         <i class="fas fa-comment"></i>
+      </div>
+   </div>
+
+   <footer>
+      <div class="footer-section">
+         <p>Copyright © 2024 Adobe. All rights reserved. | <a href="#">Term of Use</a> |  <a href="#">Privacy</a> |  <a href="#"> Do not sell or share my personal information</a></p>
+      </div>
+   </footer>
+
+   <script>
+
+
+const images = [
+    'images/Fotolia_239116868_XL.jpg',
+    'images/TomHegen.jpg',
+    'images/Fotolia_251340105_XL.jpg',
+    'images/Fotolia_239116868_XL.jpg' // Add as many as you like
+];
+
+let currentImageIndex = 0;
+
+function changeBackgroundImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    document.querySelector('.body-container').style.backgroundImage = `url(${images[currentImageIndex]})`;
+}
+
+setInterval(changeBackgroundImage, 5000); // Change image every 5 seconds
+   </script>
+</body>
+</html>
