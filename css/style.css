@@ -20,8 +20,9 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 103vh;
-    transition: background-image 1s ease-in-out; /* Smooth transition */
+    transition: background-image 3s ease-in-out; /* Smooth transition */
 }
+
 .behance-header {
     display: flex;
     gap: 1rem;

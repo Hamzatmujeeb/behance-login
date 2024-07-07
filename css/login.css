@@ -19,8 +19,8 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    transition: background-image 1s ease-in-out; /* Smooth transition */
+    height: 103vh;
+    transition: background-image 3s ease-in-out; /* Smooth transition */
 }
 
 
