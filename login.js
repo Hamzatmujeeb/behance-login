@@ -29,4 +29,4 @@ function changeBackgroundImage() {
     document.querySelector('.body-container').style.backgroundImage = `url(${images[currentImageIndex]})`;
 }
 
-setInterval(changeBackgroundImage, 5000);
+setInterval(changeBackgroundImage, 20000);

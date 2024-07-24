@@ -21,9 +21,14 @@
          <div class="form-container-wrapper">
             <h1 class="sign-in-header">Sign in</h1>
             <h4>New user? <a href="index.html">Create an account</a></h4>
+
             <div class="input-wrapper-column">
-               <input type="email" placeholder="Email address" class="email-column">
-            </div>
+               <label for="email">Email address</label>
+               <input type="email" id="email" class="email-column">
+           </div>
+           
+           
+
             <button class="btn">Continue</button>
             <div class="separator">
                <span class="left"></span><h5>Or</h5><span class="right"></span>
@@ -45,7 +50,7 @@
                   <img src="images/facebook.svg" alt="Email Icon" class="input-icon">
                   <span>Continue with Facebook</span>
                </label>
-               <input type="text" id="email">
+               <input type="text" id="email" disabled>
             </div>
          </div>
          <div class="input-wrapper">
@@ -54,7 +59,7 @@
                   <img src="images/apple.svg" alt="Phone Icon" class="input-icon">
                   <span>Continue with Apple</span>
                </label>
-               <input type="text" id="phone">
+               <input type="text" id="phone" disabled>
             </div>
          </div>
          <p class="view-more"><a href="#">View More</a></p>
@@ -77,24 +82,6 @@
       </div>
    </footer>
 
-   <script>
-
-
-const images = [
-    'images/Fotolia_239116868_XL.jpg',
-    'images/TomHegen.jpg',
-    'images/Fotolia_251340105_XL.jpg',
-    'images/Fotolia_239116868_XL.jpg' // Add as many as you like
-];
-
-let currentImageIndex = 0;
-
-function changeBackgroundImage() {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    document.querySelector('.body-container').style.backgroundImage = `url(${images[currentImageIndex]})`;
-}
-
-setInterval(changeBackgroundImage, 5000); // Change image every 5 seconds
-   </script>
+   <script src="main.js"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 110vh;
     transition: background-image 3s ease-in-out; /* Smooth transition */
     background-image: url('../images/Fotolia_251340105_XL.jpg'); /* Initial background image */
 }
@@ -43,15 +43,15 @@ html, body {
 
 .sign-in-header {
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    padding: 2rem 0 1rem 2rem;
+    font-size: 1.9rem;
+    padding: 2rem 0 1rem 2.3rem;
 }
 
 h4 {
-    font-size: 1rem;
+    font-size: 0.9889rem;
     text-decoration: none;
-    text-transform: capitalize;
-    padding: 0rem 0 1rem 2rem;
+    padding: 0rem 0 1rem 2.4rem;
+    font-weight: 400;
 }
 
 h4 a {
@@ -63,7 +63,7 @@ h4 a {
     background: #fff;
     width: 500px;
     height: 700px;
-    margin: -1rem 200px 0.88rem 550px;
+    margin: 0.999rem 200px 0.88rem 550px;
     border-radius: 0.23rem;
     display: flex;
     flex-direction: column;
@@ -79,9 +79,19 @@ h4 a {
 
 .input-wrapper-column {
     margin-left: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
-input[type="email"] {
+.input-wrapper-column label {
+    margin-bottom: 0.002rem; /* Add some space between the label and input */
+    font-weight: 600;
+    font-size: 0.79rem;
+    color: #000;
+    opacity: 1;
+}
+
+.email-column {
     border: none;
     border-bottom: 1px solid rgb(200, 195, 195); /* Always visible bottom border */
     outline: none;
@@ -92,12 +102,18 @@ input[type="email"] {
     margin-right: auto;
 }
 
-input[type="text"]:hover {
+/* Add styles for email input on hover and focus */
+.email-column:hover,
+.email-column:focus {
     border-bottom: 1px solid black;
 }
 
+input[type="email"]:hover {
+    border-bottom: 2px solid hsl(210, 72%, 55%);
+}
+
 .btn {
-    background-color:  #0073e6;
+    background-color: #0073e6;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -112,30 +128,30 @@ input[type="text"]:hover {
     background-color: #005bb5;
 }
 
-.btn:hover {
-    background-color: #005bb5;
-}
-
 .separator {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 99%;
     margin-top: 10px; /* Adjust margin to separate from previous elements */
-    padding: 1rem 0 2rem 3rem;
+    padding: 1rem 0 2rem 2.8rem;
 }
 
 .separator h5 {
-    margin: 0 10px;
+    margin: 0 12px;
     width: 5px; /* Adjust width of separator */
-    color: rgb(200, 195, 195);
-    font-size: 1rem;
+    color: rgb(64, 61, 61);
+    font-size: 0.988rem;
 }
 
 .separator .left,
 .separator .right {
     flex: 1;
     height: 1px;
-    background-color:rgb(200, 195, 195);
+    background-color: rgb(200, 195, 195);
+}
+
+.right {
+    margin-left: 0.5rem;
 }
 
 .input-wrapper {
@@ -180,7 +196,7 @@ input[type="text"] {
 }
 
 input[type="text"]:hover {
-    border-bottom: 1px solid black; /* Change color on hover */
+    border-bottom: none; /* Change color on hover */
 }
 
 input[type="text"]:focus + .input-label {
@@ -193,7 +209,7 @@ input[type="text"]:focus + .input-label {
 }
 
 .view-more {
-    color:  #0073e6;
+    color: #0073e6;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
@@ -223,6 +239,7 @@ input[type="text"]:focus + .input-label {
     justify-content: flex-start; /* Align items to the left */
     position: relative;
     margin-right: auto; /* Ensure it stays on the left side */
+    margin-bottom: 20px;
 }
 
 .st img {
@@ -240,7 +257,7 @@ input[type="text"]:focus + .input-label {
 
 .message-icon {
     position: absolute;
-    bottom: -10px;
+    bottom: 10px;
     right: 20px;
     cursor: pointer;
     width: 60px; /* Adjust the width to form a circle */
@@ -258,12 +275,17 @@ input[type="text"]:focus + .input-label {
     color: #000; /* Changed color for visibility */
 }
 
+footer {
+    height: 100px;
+}
+
 .footer-section {
     padding: 0.9999rem;
     font-size: 1rem;
     text-align: right;
     color: #000;
-    opacity: 0.5;
+    font-weight: 400;
+    opacity: 0.8;
 }
 
 .footer-section a {
@@ -271,11 +293,16 @@ input[type="text"]:focus + .input-label {
     color: #000;
 }
 
-
 /* Media Queries */
 
-@media (max-width: 768px) {
+/* Hiding .behance-header on larger devices */
+@media (min-width: 9024px) {
+    .behance-header {
+        display: none;
+    }
+}
 
+@media (max-width: 768px) {
     .form-container {
         background: #fff;
         width: 700px;
@@ -288,8 +315,9 @@ input[type="text"]:focus + .input-label {
         left: 160px;
         position: absolute; /* Ensure it stays within the normal flow */
         padding-top: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 3rem;
     }
+    
 
     .behance-header h2 {
         color: #000; /* Change color to black for all sizes */
@@ -375,6 +403,7 @@ input[type="text"]:focus + .input-label {
         top: 20px; /* Reset top position */
         left: 130px;
         position: absolute; /* Ensure it stays within the normal flow */
+        margin-bottom: 1rem;
     }
 
     .behance-header h2 {
